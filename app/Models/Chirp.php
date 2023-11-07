@@ -10,6 +10,6 @@ class Chirp extends Model
     use HasFactory;
 
     public function index() {
-        return "hello";
+       dd('testing');
     }
 }
