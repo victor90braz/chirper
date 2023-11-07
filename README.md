@@ -17,3 +17,5 @@ php artisan make:policy ChirpPolicy --model=Chirp
 php artisan make:notification NewChirp
 php artisan make:event ChirpCreated
 php artisan make:listener SendChirpCreatedNotifications --event=ChirpCreated
+
+https://laravel.com/docs/mail#introduction
