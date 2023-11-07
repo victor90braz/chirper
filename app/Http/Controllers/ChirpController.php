@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\View\View;
+use Illuminate\Http\Request;
 
 class ChirpController extends Controller
 {
@@ -10,7 +11,7 @@ class ChirpController extends Controller
         return view('chirps.index');
     }
 
-    public function store() {
-        dd(request()->message);
+    public function store(Request $request) {
+        dd($request->all());
     }
 }
