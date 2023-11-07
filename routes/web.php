@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\ChirpController;
 use App\Http\Controllers\ProfileController;
-use App\Models\Chirp;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +29,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware('auth')->get('chirp', [Chirp::class, 'index']);
+Route::middleware('auth')->get('chirp', [ChirpController::class, 'index']);
 
 require __DIR__.'/auth.php';
