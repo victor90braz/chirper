@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\View\View;
 
 class ChirpController extends Controller
@@ -9,5 +8,9 @@ class ChirpController extends Controller
     public function index(): View
     {
         return view('chirps.index');
+    }
+
+    public function store() {
+        dd(request()->message);
     }
 }
