@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('chirps', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('user_id');
+            $table->text('message');
             $table->timestamps();
         });
     }
