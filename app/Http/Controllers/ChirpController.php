@@ -10,5 +10,4 @@ class ChirpController extends Controller
     {
         return view('chirps.index');
     }
-
 }
