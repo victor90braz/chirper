@@ -30,6 +30,8 @@ Route::middleware('auth')->group(function () {
 });
 
 // Route::middleware('auth')->get('chirp', [ChirpController::class, 'index']);
-Route::resource('chirps', ChirpController::class)->only(['index', 'store'])->middleware('auth');
+Route::resource('chirps', ChirpController::class)
+        ->only(['index', 'store','edit', 'update'])
+        ->middleware('auth');
 
 require __DIR__.'/auth.php';

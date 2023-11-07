@@ -26,4 +26,14 @@ class ChirpController extends Controller
 
         return redirect(route('chirps.index'));
     }
+
+    public function edit(Chirp $chirp)
+    {
+
+    }
+
+    public function update(Request $request, Chirp $chirp)
+    {
+
+    }
 }
