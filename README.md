@@ -13,3 +13,7 @@ php artisan make:policy ChirpPolicy --model=Chirp
             //
             return $chirp->user()->is($user);
     }
+
+php artisan make:notification NewChirp
+php artisan make:event ChirpCreated
+php artisan make:listener SendChirpCreatedNotifications --event=ChirpCreated
