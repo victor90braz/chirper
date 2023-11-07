@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
+use Illuminate\Http\Response;
 
 class ChirpController extends Controller
 {
-    public function index(): View
+    public function index(): Response
     {
-        return view('chirps.index');
+        return response('chirps.index');
     }
+
 
 }

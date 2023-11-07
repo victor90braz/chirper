@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware('auth')->get('chirp', [ChirpController::class, 'index']);
+// Route::middleware('auth')->get('chirp', [ChirpController::class, 'index']);
+Route::resource('chirps', ChirpController::class)->only('index')->middleware('auth');
 
 require __DIR__.'/auth.php';
